@@ -1,34 +1,29 @@
 {
-  "name": "gh-action-bump-version",
-  "version": "9.0.20",
+  "name": "gh-action-advanced-bump-version",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phips28/gh-action-bump-version.git"
+    "url": "git+https://github.com/florian-h05/gh-action-advanced-bump-version.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Florian Hotze",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phips28/gh-action-bump-version/issues"
+    "url": "https://github.com/florian-h05/gh-action-advanced-bump-version/issues"
   },
-  "homepage": "https://github.com/phips28/gh-action-bump-version#readme",
+  "homepage": "https://github.com/florian-h05/gh-action-advanced-bump-version#readme",
   "private": true,
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "test": "npm run end-to-end-test",
-    "end-to-end-test": "jest --roots=tests/end-to-end --testTimeout=300000 --runInBand"
+    "deploy": "ncc build index.js --license licenses.txt"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^27.0.1",
-    "dotenv": "^10.0.0",
-    "execa": "^5.1.1",
-    "jest": "^25.5.4",
-    "js-yaml": "^4.1.0",
-    "node-fetch": "^2.6.1",
-    "prettier": "^2.3.0",
-    "standard": "^14.3.3",
-    "tiny-glob": "^0.2.9"
+    "@vercel/ncc": "^0.34.0",
+    "semistandard": "^16.0.1"
+  },
+  "dependencies": {
+    "@actions/github": "^5.0.3",
+    "dotenv": "^10.0.0"
   }
 }
