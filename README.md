@@ -20,27 +20,23 @@ You can look to the [`.github/workflows/autopublish.yml`](/.github/workflows/aut
 
 ## Usage
 
+Example:
 ```yaml
 - name: 'Automated Version Bump'
-  uses: 'florian-h05/gh-action-bump-version@master'
+  uses: 'florian-h05/gh-action-advanced-bump-version@main'
   id: version-bump
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   with:
-    major-wording:
-    minor-wording:
-    patch-wording:
-    rc-wording:
-    hours-to-go-back:
-    skip-if-no-commits:
-    package-json-dir:
-    tag-prefix:
-    skip-tag:
-    commit-message:
-    bump-policy:
-    target-branch:
-    default:
-    preid:
+    major-wording: 'major,Major,breaking,Breaking'
+    minor-wording: 'minor,Minor,add,Add,adds,Adds,new,New'
+    patch-wording: 'fix,Fix,fixes,Fixes,patch,Patch'
+    rc-wording: 'rc,pre'
+    hours-to-go-back: 24
+    skip-if-no-commits: 'true'
+    tag-prefix: 'v'
+    commit-message: 'CI: bumps version to {{version}} [skip ci]'
+    bump-policy: 'last-commit'
 ```
 
 ### Configuration
