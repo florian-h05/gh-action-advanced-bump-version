@@ -1,6 +1,6 @@
 {
   "name": "gh-action-advanced-bump-version",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/florian-h05/gh-action-advanced-bump-version.git"
